@@ -1,5 +1,6 @@
 apply plugin: 'com.novoda.bintray-release'
 apply plugin: 'com.android.library'
+apply plugin: 'com.github.dcendents.android-maven'
 
 //./gradlew bintrayUpload
 publish {
@@ -10,15 +11,15 @@ publish {
     publishVersion = '2.4.5'
     desc = 'MediaPicker'
     dryRun = false
-    website = 'https://github.com/alhzmy13/MediaPicker'
+    website = 'https://github.com/atomic991/MediaPicker'
 }
 
 android {
-    compileSdkVersion 28
+    compileSdkVersion 27
 
     defaultConfig {
         minSdkVersion 14
-        targetSdkVersion 28
+        targetSdkVersion 27
         versionCode 1
         versionName "1.0"
     }
