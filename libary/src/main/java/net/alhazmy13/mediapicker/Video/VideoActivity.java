@@ -369,15 +369,7 @@ public class VideoActivity extends AppCompatActivity {
         protected Void doInBackground(Void... params) {
             for (String mPath : listOfImgs) {
                 File file = new File(mPath);
-                File destinationFile;
-                if (mVideoConfig.isImgFromCamera) {
-                    destinationFile = file;
-                } else {
-                    destinationFile = new File(mVideoConfig.directory, Utility.getRandomString() + mVideoConfig.extension.getValue());
-                    FileProcessing.copyDirectory(file, destinationFile);
-                }
-                destinationPaths.add(destinationFile.getAbsolutePath());
-
+                destinationPaths.add(file.getAbsolutePath());
             }
 
             return null;
