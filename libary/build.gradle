@@ -1,18 +1,17 @@
-apply plugin: 'com.novoda.bintray-release'
 apply plugin: 'com.android.library'
 apply plugin: 'com.github.dcendents.android-maven'
 
 //./gradlew bintrayUpload
-publish {
-    userOrg = 'alhazmy13'
-    groupId = 'net.alhazmy13.MediaPicker'
-    artifactId = 'libary'
-    uploadName = 'MediaPicker'
-    publishVersion = '2.4.5'
-    desc = 'MediaPicker'
-    dryRun = false
-    website = 'https://github.com/atomic991/MediaPicker'
-}
+//publish {
+//    userOrg = 'atomic991'
+//    groupId = 'com.github.atomic991.MediaPicker'
+//    artifactId = 'libary'
+//    uploadName = 'MediaPicker'
+//    publishVersion = '2.4.5'
+//    desc = 'MediaPicker'
+//    dryRun = false
+//    website = 'https://github.com/atomic991/MediaPicker'
+//}
 
 android {
     compileSdkVersion 27
