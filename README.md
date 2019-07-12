@@ -12,7 +12,8 @@
 **[Please let me know if your application go to production via this link](https://docs.google.com/forms/d/e/1FAIpQLSe4Y5Fwn1mlEoD4RxjXQzTvL4mofhESuBlTkAPQhI7J_WqMDQ/viewform?c=0&w=1)**
 ------
 Media Picker is an Android Libary that lets you to select multiple images, video or voice for Android 4.1 (API 16) +.
-You can report any issue on issues page. **Note: If you speak Arabic, you can submit issues with Arabic language and I will check them. :)**
+You can report any issue on issues page.
+**Based on (https://github.com/alhazmy13/MediaPicker)**
 
 # NOTE
 ----
@@ -23,9 +24,9 @@ This build `2.x.x` will break backward compatibility and there are a lot of chan
 
 ```xml
 <dependency>
-<groupId>net.alhazmy13.MediaPicker</groupId>
-<artifactId>libary</artifactId>
-<version>2.4.4</version>
+	<groupId>com.github.myodev</groupId>
+	<artifactId>MediaPicker</artifactId>
+	<version>2.4.6</version>
 </dependency>
 ```
 
@@ -34,7 +35,7 @@ This build `2.x.x` will break backward compatibility and there are a lot of chan
 
 ```gradle
 dependencies {
-	implementation 'net.alhazmy13.MediaPicker:libary:2.4.4'
+	implementation 'com.github.myodev:MediaPicker:2.4.6'
 }
 ```
 
