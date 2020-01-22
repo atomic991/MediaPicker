@@ -11,6 +11,7 @@
             android:theme="@style/Theme.AppCompat.Translucent" />
         <activity
             android:name=".Video.VideoActivity"
+            android:screenOrientation="portrait"
             android:theme="@style/Theme.AppCompat.Translucent" />
 
         <provider
