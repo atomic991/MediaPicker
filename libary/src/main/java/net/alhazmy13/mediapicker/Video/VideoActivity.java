@@ -178,8 +178,9 @@ public class VideoActivity extends AppCompatActivity {
         super.onRestoreInstanceState(savedInstanceState);
         if (savedInstanceState.containsKey(VideoTags.Tags.CAMERA_IMAGE_URI)) {
             mVideoUri = Uri.parse(savedInstanceState.getString(VideoTags.Tags.CAMERA_IMAGE_URI));
-            destination = new File(mVideoUri.getPath());
             mVideoConfig = (VideoConfig) savedInstanceState.getSerializable(VideoTags.Tags.IMG_CONFIG);
+            destination = new File(mVideoConfig.directory, mVideoUri.getLastPathSegment());
+
         }
     }
 
