@@ -32,6 +32,8 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import static android.provider.MediaStore.EXTRA_DURATION_LIMIT;
+
 /**
  * Created by Alhazmy13 on 10/26/15.
  * MediaPicker
@@ -128,7 +130,6 @@ public class VideoActivity extends AppCompatActivity {
                     }
                 }).create();
         alertDialog.show();
-
     }
 
     private void startActivityFromGallery() {
@@ -159,6 +160,9 @@ public class VideoActivity extends AppCompatActivity {
         Intent intent = new Intent(MediaStore.ACTION_VIDEO_CAPTURE);
         mVideoUri = FileProvider.getUriForFile(this, this.getApplicationContext().getPackageName() + ".provider", destination);
         intent.putExtra(MediaStore.EXTRA_OUTPUT, mVideoUri);
+        if(mVideoConfig.durationLimit > 0) {
+            intent.putExtra(EXTRA_DURATION_LIMIT, mVideoConfig.durationLimit);
+        }
         startActivityForResult(Intent.createChooser(intent, "Select Video"), VideoTags.IntentCode.CAMERA_REQUEST);
         if (mVideoConfig.debug)
             Log.d(VideoTags.Tags.TAG, "Camera Start");

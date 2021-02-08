@@ -73,6 +73,12 @@ public class VideoPicker {
         }
 
         @Override
+        public Builder durationLimit(int durationLimit) {
+            this.imageConfig.durationLimit = durationLimit;
+            return this;
+        }
+
+        @Override
         public VideoPicker.Builder enableDebuggingMode(boolean debug) {
             this.imageConfig.debug = debug;
             return this;

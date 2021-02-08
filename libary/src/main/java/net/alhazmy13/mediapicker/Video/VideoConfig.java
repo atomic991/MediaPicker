@@ -16,6 +16,7 @@ class VideoConfig implements Serializable {
     protected boolean allowMultiple;
     protected boolean isImgFromCamera;
     protected boolean debug;
+    protected int durationLimit;
 
     VideoConfig() {
         this.extension = VideoPicker.Extension.MP4;
@@ -33,6 +34,7 @@ class VideoConfig implements Serializable {
                 ", allowMultiple=" + allowMultiple +
                 ", isImgFromCamera=" + isImgFromCamera +
                 ", debug=" + debug +
+                ", durationLimit=" + durationLimit +
                 '}';
     }
 }

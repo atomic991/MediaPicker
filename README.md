@@ -26,7 +26,7 @@ This build `2.x.x` will break backward compatibility and there are a lot of chan
 <dependency>
 	<groupId>com.github.myodev</groupId>
 	<artifactId>MediaPicker</artifactId>
-	<version>2.4.6</version>
+	<version>2.4.8</version>
 </dependency>
 ```
 
