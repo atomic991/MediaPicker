@@ -262,7 +262,7 @@ public class VideoActivity extends AppCompatActivity {
             final List<String> permissionsList = new ArrayList<>();
             if ((mVideoConfig.mode == VideoPicker.Mode.CAMERA || mVideoConfig.mode == VideoPicker.Mode.CAMERA_AND_GALLERY) && !addPermission(permissionsList, Manifest.permission.CAMERA))
                 permissionsNeeded.add(getString(R.string.media_picker_camera));
-            if (!addPermission(permissionsList, Manifest.permission.WRITE_EXTERNAL_STORAGE))
+            if (Build.VERSION.SDK_INT <= 32 && !addPermission(permissionsList, Manifest.permission.WRITE_EXTERNAL_STORAGE))
                 permissionsNeeded.add(getString(R.string.media_picker_read_Write_external_storage));
 
             if (permissionsList.size() > 0) {
